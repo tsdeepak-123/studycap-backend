@@ -18,7 +18,7 @@ app.use(express.json());
 // }));
 
 app.use(cors({
-  origin: ["https://www.studycap.com"],
+  origin: ["https://www.studycap.in"],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
