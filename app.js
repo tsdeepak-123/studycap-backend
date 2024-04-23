@@ -16,11 +16,13 @@ app.use(express.json());
 //     methods: ["GET", "POST", "PATCH"],
 //     credentials: true
 // }));
+
 app.use(cors({
-    origin: ["https://www.studycap.in"],
-    methods: ["GET", "POST", "PATCH"],
-    credentials: true
-}));
+  origin: ["https://www.studycap.com"],
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}))
 
 app.use('/', userRoute);
 app.use('/admin', adminRoute);
