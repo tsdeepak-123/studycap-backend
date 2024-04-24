@@ -18,11 +18,12 @@ app.use(express.json());
 // }));
 
 app.use(cors({
-  origin: ["https://www.studycap.in"],
-  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}))
+    origin: ["https://www.studycap.in", "https://studycap.in"],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  }));
+  
 
 app.use('/', userRoute);
 app.use('/admin', adminRoute);
